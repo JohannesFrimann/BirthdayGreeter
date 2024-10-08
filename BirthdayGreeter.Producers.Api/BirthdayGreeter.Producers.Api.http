@@ -1,0 +1,17 @@
+@BirthdayGreeter.Producers.Api_HostAddress = https://localhost:7252
+
+GET {{BirthdayGreeter.Producers.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+POST {{BirthdayGreeter.Producers.Api_HostAddress}}/birtdaygreeting/SendMessage
+Content-Type: application/json
+
+{
+  "sender": "Jóhannes",
+  "recipient": "some dude",
+  "text": "til hamingju með ammlið"
+}
+
+###
