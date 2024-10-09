@@ -17,8 +17,7 @@ public class GreetingsSendConsumer : IConsumer<VerySpecialGreeting>
     }
     public async Task Consume(ConsumeContext<VerySpecialGreeting> context)
     {
-        await _hubcontext.Clients.All.SendAsync("ReceiveBirthdayNotification", context.Message.ToDTO("GreetingsSendConsumer")); //, context.Message.ToStringWithConsumer("GreetingsSendConsumer"));
-        Console.WriteLine(context.Message.ToStringWithConsumer("GreetingsSendConsumer"));
+        await _hubcontext.Clients.All.SendAsync("ReceiveBirthdayNotification", context.Message.ToDTO("GreetingsSendConsumer"));        Console.WriteLine(context.Message.ToStringWithConsumer("GreetingsSendConsumer"));
         await Task.CompletedTask;
     }
 }

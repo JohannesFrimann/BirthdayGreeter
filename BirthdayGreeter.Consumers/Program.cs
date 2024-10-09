@@ -32,15 +32,15 @@ builder.Services.AddMassTransit(x =>
     x.UsingRabbitMq((context, cfg) =>
     {
 
-        /*cfg.Host("goose.rmq2.cloudamqp.com", "zifuhpze", h =>
+        /*cfg.Host("goose.rmq2.cloudamqp.com", "dfxmgxxk", h =>
         {
-            h.Username("zifuhpze");
-            h.Password("JB1-kD3eB-xUE9CUpqqtM3mdjq8bO_-I");
+            h.Username("dfxmgxxk");
+            h.Password("Kd0ddfCp5jiyM8glBKKGzLaPKT_MAZdU");
         });*/
-        cfg.Host("localhost", "/", h =>
+        cfg.Host("goose.rmq2.cloudamqp.com", "whbpcxrb", h =>
         {
-            h.Username("guest");
-            h.Password("guest");
+            h.Username("whbpcxrb");
+            h.Password("IH5o7UC2lmhVcpfKwa-iJu51ZkLyF-5y");
         });
 
         cfg.ReceiveEndpoint("very-special-greeting", e => {
